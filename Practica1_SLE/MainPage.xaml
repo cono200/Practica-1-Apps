@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Practica1_SLE.MainPage">
+
+    <StackLayout>
+        <ScrollView>
+            <Grid>
+                <!--BOXVIEW
+            QUE ES UN RECTANGULO-->
+                <BoxView
+            Color="Red"
+            WidthRequest="150"
+            HeightRequest="150"
+            HorizontalOptions="Center"
+            Grid.Row="0"
+            Grid.Column="0"/>
+
+
+                <!--ELLIPSE QUE ES UN CIRCULO-->
+                <Ellipse
+                Fill="blue"
+                WidthRequest="150"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Grid.Row="0"
+                Grid.Column="1"
+            />
+
+                <!--IMAGEN-->
+                <Image Source="https://aka.ms/campus.jpg"
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center"
+                   Grid.Row="1"
+                   Grid.Column="0"/>
+
+                <!--ETIQUETA-->
+                <Label Text="Hello, Xamarin.Forms!"
+                   FontSize="Large"
+                   FontAttributes="Italic"
+                   HorizontalTextAlignment="Center"
+                   Grid.Row="1"
+                   Grid.Column="1"/>
+
+
+                <!---LINEA-->
+                <Line X1="40"
+                  Y1="0"
+                  X2="0"
+                  Y2="120"
+                  Stroke="Red"
+                  HorizontalOptions="Center"
+                  Grid.Row="2"
+                  Grid.Column="0"/>
+
+                <!--AKI VA EL MAPA-->
+
+
+
+
+                <!--RUTA DE ACCESO-->
+                <Path Stroke="Black"
+                  Aspect="Uniform"
+                  HorizontalOptions="Center"
+                  HeightRequest="100"
+                  WidthRequest="100"
+                  Data="M13.9,16.2
+            L32,16.2 32,31.9 13.9,30.1Z
+            M0,16.2
+            L11.9,16.2 11.9,29.9 0,28.6Z
+            M11.9,2
+            L11.9,14.2 0,14.2 0,3.3Z
+            M32,0
+            L32,14.2 13.9,14.2 13.9,1.8Z"
+                  Grid.Row="2"
+                  Grid.Column="1"/>
+
+                <!---POLIGONO-->
+                <Polygon Points="0 48, 0 144, 96 150, 100 0, 192 0, 192 96,
+                 50 96, 48 192, 150 200 144 48"
+                     Fill="Blue"
+                     Stroke="yellow "
+                     StrokeThickness="3"
+                     HorizontalOptions="Center"
+                     Grid.Row="3"
+                     Grid.Column="0"
+                />
+
+                <!--POLINEA-->
+                <Polyline Points="0,0 10,30, 15,0 18,60 23,30 35,30 40,0
+                  43,60 48,30 100,30"
+                      Stroke="Red"
+                      HorizontalOptions="Center"
+                      Grid.Row="3"
+                      Grid.Column="1"/>
+
+                <!--RECTANGULO-->
+                <Rectangle Fill="Green"
+                       WidthRequest="150"
+                       HeightRequest="50"
+                       HorizontalOptions="Center"
+                       Grid.Row="4"
+                       Grid.Column="0"/>
+
+                <!---WEB VIEW-->
+                <WebView Source="https://learn.microsoft.com/xamarin/"
+                     VerticalOptions="FillAndExpand"
+                      Grid.Row="4"
+                       Grid.Column="1"/>
+
+                <!--BOTON-->
+                <Button Text="Click Me!"
+                    Font="Large"
+                    BorderWidth="1"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                   Grid.Row="0"
+                    Grid.Column="2"
+                    />
+
+                <!--BOTON CON IMAGEN-->
+                <ImageButton Source="https://i.ibb.co/W60X7KN/images.jpg"
+                         HorizontalOptions="Center"
+                         VerticalOptions="CenterAndExpand"
+                         Grid.Row="1"
+                         Grid.Column="2"/>
+                    
+                <!--RADIO BUTTON-->
+
+                <RadioButton Content="Banana"
+                             IsChecked="False"
+                             Grid.Row="2"
+                             Grid.Column="2"
+                   />
+
+                <!--REFRESH VIEW REFRESCAR-->
+                <RefreshView
+                    IsRefreshing="True"
+                    Grid.Row="3"
+                    Grid.Column="2"
+                    />
+                    
+                
+                <!--BARRA DE BUSQUEDA-->
+                <SearchBar Placeholder="Enter search term"
+                           Grid.Row="4"
+                           Grid.Column="2"/>
+
+                <!--CHECK BOX-->
+                <CheckBox IsChecked="false"
+                          HorizontalOptions="Center"
+                          VerticalOptions="CenterAndExpand"
+                          Grid.Row="0"
+                          Grid.Column="3"/>
+
+
+                <!--SLIDER-->
+                <Slider
+                    Minimum="0"
+                    Maximum="100"
+                    VerticalOptions="CenterAndExpand"
+                    Grid.Row="1"
+                    Grid.Column="3"
+                    BackgroundColor="Black"/>
+
+                <!--STEPPER-->
+                <Stepper Minimum="0"
+                         Maximum="10"
+                         Increment="0.1"
+                         HorizontalOptions="Center"
+                         VerticalOptions="CenterAndExpand"
+                         Grid.Row="2"
+                         Grid.Column="3"/>
+
+
+                <!--SWITCH-->
+                <Switch IsToggled="False"
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand"
+                        Grid.Row="3"
+                        Grid.Column="3"/>
+
+
+                <!--DATA PICKER -->
+                <DatePicker Format="D"
+                            VerticalOptions="CenterAndExpand"
+                            Grid.Row="4"
+                            Grid.Column="3"/>
+
+                <TimePicker Format="T"
+                            VerticalOptions="CenterAndExpand"
+                            Grid.Row="5"
+                            Grid.Column="3"/>
+
+                <Entry Keyboard="Email"
+                       Placeholder="Enter email addres"
+                       VerticalOptions="CenterAndExpand"
+                       Grid.Row="0"
+                       Grid.Column="4"/>
+
+                <Editor VerticalOptions="FillAndExpand"
+                        Grid.Row="1"
+                        Grid.Column="4"/>
+
+                <ActivityIndicator IsRunning="True"
+                                   VerticalOptions="CenterAndExpand"
+                                   Grid.Row="2"
+                                   Grid.Column="4"/>
+                <ProgressBar Progress=".5"
+                             VerticalOptions="CenterAndExpand"
+                             Grid.Row="2"
+                             Grid.Column="4"/>
+
+            </Grid>
+
+
+
+            <!--SWIPER VIEW-->
+        </ScrollView>
+        <SwipeView>
+            <SwipeView.LeftItems>
+                <SwipeItems>
+                    <SwipeItem Text="Delete"
+                       IconImageSource="delete.png"
+                       BackgroundColor="LightPink"
+                       />
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <!-- Content -->
+        </SwipeView>
+
+
+    </StackLayout>
+    
+
+</ContentPage>
